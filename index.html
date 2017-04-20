@@ -44,7 +44,10 @@
       <!-- banner部分开始 -->
       <div class="banner">
         <div class="banner-content">
-          <img src="images/banner.jpg" class="img-responsive"  alt="">
+          <video id="banvideo" autoplay>
+            <source src="video/banner.mp4" type="video/mp4">
+          </video>
+          <img class="banimg img-responsive" src="images/banner.jpg" alt="">
         </div>
       </div>
       <!-- banner部分结束 -->
@@ -107,8 +110,11 @@
               <div class="info-title col-xs-12">
                 <h2>媒体视频</h2>
               </div>
-              <div class="info-img">
-                  <img class="img-responsive" src="images/video.jpg" alt="">
+              <div class="media-video">
+                  <video id="infoVideo" preload="preload" controls poster='images/video.jpg' width="100%" height="326px">
+                    <source src="video/720.mp4" type="video/mp4">
+                  </video>
+                  <img class="media-video-ad img-responsive" src="images/video.jpg" alt="">
               </div>
               <div class="video-info">
                 <a href="#"><h2>室内设计：与新天地裸心社的初次相遇</h2></a>
@@ -157,5 +163,40 @@
       <!-- 底部部分结束 -->
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(function(){
+          $("#banvideo").on("ended",function(){
+            $("#banvideo").css("display","none");
+            $(".banimg").show();
+          });
+          $("#infoVideo").on("click",function(){
+            if ($("#infoVideo")[0].paused) {
+              $("#infoVideo")[0].play();
+              $('.media-video-ad').hide();
+            } else {
+              $("#infoVideo")[0].pause();
+              $('.media-video-ad').show();
+            }
+          });
+          $(".media-video-ad").on("click",function(){
+            if ($("#infoVideo")[0].paused) {
+              $("#infoVideo")[0].play();
+              $('.media-video-ad').hide();
+            } else {
+              $("#infoVideo")[0].pause();
+              $('.media-video-ad').show();
+            }
+          });
+          $("#infoVideo").on("ended",function(){
+            $(".media-video-ad").show();
+          });
+
+
+          // $("#infoVideo").on("dblclick",function(){
+          //    $("#infoVideo")[0].RequestFullScreen();
+          // })
+        });
+
+    </script>
   </body>
 </html>
