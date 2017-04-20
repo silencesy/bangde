@@ -441,8 +441,23 @@ s, i, em {
         padding: 0 15px;
     }
     .news-info .info-content .info-text div {
-        line-height: 15px;
+        line-height: 20px;
     }
-
-
+    .news-video .info-title {
+        margin-bottom: 0;
+        margin-top: 10px;
+    }
+    #infoVideo {
+        height: 220px !important;
+    }
+    .news-info .info-content .info-text div {
+        font-size: 12px;
+    }
+    .visible-xs {
+        display: block !important;
+    }
+    .header-con {
+        margin-top: 55px;
+    }
+ 
 }
