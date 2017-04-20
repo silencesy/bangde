@@ -262,10 +262,11 @@ s, i, em {
     position: relative;
 }
 
-.news-info .media-video img{
+.news-info .media-video .media-video-ad{
     position: absolute;
-    top: 45%;
-    left: 45%;
+    top: 50%;
+    left: 50%;
+    transform:translateX(-50%) translateY(-50%);
     display: none;
 }
 /*最新资讯结束*/
@@ -459,6 +460,13 @@ s, i, em {
     }
     .header-con {
         margin-top: 55px;
+    }
+
+    /*暂停图标*/ 
+    .news-info .media-video .media-video-ad {
+        width: 40px;
+        height: 40px;
+        top: 55%;
     }
  
 }
