@@ -17,7 +17,7 @@
   <body>
       <!-- 头部部分开始 -->
       <header class="header">
-        <div class="container">
+        <div class="container header-con">
           <div class="row">
             <div class="top-logo pull-left  col-sm-5 col-xm-12">
               <a href="#">
@@ -161,6 +161,39 @@
         </div>
       </footer> 
       <!-- 底部部分结束 -->
+
+     <!-- 移动端nav开始 -->
+        <nav class="navbar navbar-default navbar-fixed-top visible-xs " role="navigation">
+            <div class="container-fluid mobile-nav-container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mobile-navbar-collapse">
+                        <span class="sr-only"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- <a href="#"><img src="images/fixed-logo.jpg" alt=""></a> -->
+                </div>
+                <div class="collapse navbar-collapse" id="mobile-navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">首页</a></li>
+                        <li><a href="#">关于邦德</a></li>
+                        <li><a href="#">我们的业务</a></li>
+                        <li><a href="#">新闻和媒体</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-collapse collapse" id="mobile-navbar-search" aria-expanded="true">
+                    <div class="search-group search-group-mobile">
+                        <form id="mobile-search-form" method="post" action="#">
+                            <input name="keywords" type="search" value="" placeholder="搜索" class="pull-left">
+                            <button type="submit" class="icon-search pull-left"><span class="glyphicon glyphicon-search"></span></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    <!-- 移动端nav结束 -->
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
