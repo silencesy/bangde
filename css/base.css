@@ -195,6 +195,7 @@ s, i, em {
 .glory {
     padding: 10px 0;
     background-color: #f2f2f2;
+    display: none;
 }
 
 .glory div {
@@ -263,8 +264,8 @@ s, i, em {
 
 .news-info .media-video img{
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 45%;
+    left: 45%;
     display: none;
 }
 /*最新资讯结束*/

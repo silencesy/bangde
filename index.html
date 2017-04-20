@@ -114,7 +114,7 @@
                   <video id="infoVideo" preload="preload" controls poster='images/video.jpg' width="100%" height="326px">
                     <source src="video/720.mp4" type="video/mp4">
                   </video>
-                  <img class="media-video-ad img-responsive" src="images/video.jpg" alt="">
+                  <img class="media-video-ad img-responsive" src="images/pause.png" alt="">
               </div>
               <div class="video-info">
                 <a href="#"><h2>室内设计：与新天地裸心社的初次相遇</h2></a>
@@ -168,6 +168,11 @@
           $("#banvideo").on("ended",function(){
             $("#banvideo").css("display","none");
             $(".banimg").show();
+            setTimeout(function(){
+            	if($(window).width()>768){
+            		$('.glory').slideDown(200);
+            	}
+            },1000);
           });
           $("#infoVideo").on("click",function(){
             if ($("#infoVideo")[0].paused) {
