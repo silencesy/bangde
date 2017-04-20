@@ -332,3 +332,97 @@ s, i, em {
 
 
 
+
+
+
+
+
+/***================  响应式  ================***/
+
+@media screen and (max-width:767px) {
+    .header {
+        height: 80px;
+        line-height: 80px;
+    }
+    .container {
+        width: 100%;
+        padding: 0;
+    }
+    .row {
+        margin: 0;
+    }
+    .container .top-logo img {
+        width: 75%;
+    }
+    .banner-content img {
+        width: 100%;
+    }
+    .glory p {
+        padding-right: 0;
+        display: inline-block;
+        width: 70%;
+    } 
+    .top-logo {
+        float: none !important;
+        text-align: center;
+        display: inline-block;   
+    }
+    .glory {
+        display: none;
+    } 
+    .top-nav {
+        display: none;
+    }
+    .header .top-nav-ul li a {
+        padding: 0 10px;
+    }
+    .header {
+
+    }
+    .news-info .info-title h2 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .news-info > .container > .row {
+        padding: 20px 0 20px 0;
+    }
+    .info-img {
+        width: 34%;
+    }
+    .info-img > a {
+        float: left;
+    }
+    .info-text {
+        float: right;
+    }
+    .news-info .info-content .info-img img {
+        width: 100%;
+    }
+    .news-info .info-content .info-text {
+        width: 60%;
+    }
+    .news-info .info-content {
+        margin: 15px 0;
+    }
+    .footer .about-us {
+        display: none;
+    }
+    .contact-us {
+        display: none;
+    }
+    .footer {
+        padding: 0;
+        height: 130px;
+    }
+    .footer .bottom-logo {
+        margin-top: 0;
+    }
+    .copyright span {
+        padding: 0 15px;
+    }
+    .news-info .info-content .info-text div {
+        line-height: 15px;
+    }
+
+
+}
