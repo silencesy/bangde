@@ -181,6 +181,9 @@ s, i, em {
     color: #e60012;
 }
 /*头部结束*/
+.banner {
+    position: relative;
+}
 
 .banner .banner-content video {
     width: 100%;
@@ -190,12 +193,21 @@ s, i, em {
     display: none;
 }
 
+.video-fi {
+    display: none;
+}
+
 
 /*glory开始*/
 .glory {
+    width: 100%;
     padding: 10px 0;
     background-color: #f2f2f2;
     display: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 0 auto;
 }
 
 .glory div {
