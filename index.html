@@ -80,7 +80,7 @@
               </div>
               <div class="info-content col-xs-12">
                 <div class="info-img">
-                  <a href="#"><img src="images/news.jpg" alt=""></a>
+                  <a href="#"><img data-original="images/news.jpg" alt=""></a>
                 </div>
                 <div class="info-text">
                   <a href="#"><p>邦恩德第三次荣获PERE颁发“年度亚洲最佳机构</p></a>
@@ -89,7 +89,7 @@
               </div>
               <div class="info-content col-xs-12">
                 <div class="info-img">
-                  <a href="#"><img src="images/news.jpg" alt=""></a>
+                  <a href="#"><img data-original="images/news.jpg" alt=""></a>
                 </div>
                 <div class="info-text">
                   <a href="#"><p>邦恩德第三次荣获PERE颁发“年度亚洲最佳机构</p></a>
@@ -98,7 +98,7 @@
               </div>
               <div class="info-content col-xs-12">
                 <div class="info-img">
-                  <a href="#"><img src="images/news.jpg" alt=""></a>
+                  <a href="#"><img data-original="images/news.jpg" alt=""></a>
                 </div>
                 <div class="info-text">
                   <a href="#"><p>邦恩德第三次荣获PERE颁发“年度亚洲最佳机构</p></a>
@@ -189,6 +189,7 @@
     <!-- 移动端nav结束 -->
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.lazyload.js"></script>
     <script>
         $(function(){
           $("#banvideo").on("ended",function(){
@@ -232,6 +233,13 @@
           $("#infoVideo")[0].addEventListener("pause",function(){
           	$('.media-video-ad').show();
           });
+
+          $("img").lazyload(
+            { effect: "fadeIn", placeholder:"http://xxx/1.gif" }
+          );
+
+
+
         });
 
         

@@ -445,6 +445,8 @@ s, i, em {
     }
     .footer .bottom-logo {
         margin-top: 0;
+        text-align: center;
+        padding: 17px 0;
     }
     .copyright span {
         padding: 0 15px;
@@ -465,6 +467,12 @@ s, i, em {
     .visible-xs {
         display: block !important;
     }
+    .bottom-logo img {
+        width: 45%;
+    }
+    .footer .footer-line {
+        margin-top: 0;
+    }
 
     /*暂停图标*/ 
     .news-info .media-video .media-video-ad {
@@ -472,5 +480,6 @@ s, i, em {
         height: 40px;
         top: 55%;
     }
+
  
 }
