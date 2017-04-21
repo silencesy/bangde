@@ -47,28 +47,27 @@
           <video id="banvideo" autoplay>
             <source src="video/banner.mp4" type="video/mp4">
           </video>
-          <a href="#"><img class="banimg img-responsive" src="images/banner.jpg" alt=""></a>
+          <img class="banimg img-responsive" src="images/banner.jpg" alt="">
         </div>
-        <!-- glory部分开始 -->
-			<section class="glory">
-				<div class="container">
-				  <div class="row">
-				    <div class="col-sm-6 col-xs-12">
-				      <a href="#"><img class="pull-left" src="images/event.jpg" alt=""></a>
-				      <a href="#"><p class="pull-left">邦恩德第三次荣获PERE颁发“年度亚洲最佳机构”</p></a>
-				    </div>
-				    <div class="col-sm-6 col-xs-12">
-				      <a href="#"><img class="pull-left" src="images/event.jpg" alt=""></a>
-				      <a href="#"><p class="pull-left">邦恩德第三次荣获PERE颁发“年度亚洲最佳机构”</p></a>
-				    </div>
-				  </div>
-				</div>
-			</section>
-      <!-- glory部分结束 -->
       </div>
       <!-- banner部分结束 -->
 
-      
+      <!-- glory部分开始 -->
+      <section class="glory">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-xs-12">
+              <a href="#"><img class="pull-left" src="images/event.jpg" alt=""></a>
+              <a href="#"><p class="pull-left">邦恩德第三次荣获PERE颁发“年度亚洲最佳机构”</p></a>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+              <a href="#"><img class="pull-left" src="images/event.jpg" alt=""></a>
+              <a href="#"><p class="pull-left">邦恩德第三次荣获PERE颁发“年度亚洲最佳机构”</p></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- glory部分结束 -->
 
       <!-- 新闻资讯和媒体视频部分开始 -->
       <section class="news-info" >
@@ -80,7 +79,7 @@
               </div>
               <div class="info-content col-xs-12">
                 <div class="info-img">
-                  <a href="#"><img data-original="images/news.jpg" alt=""></a>
+                  <a href="#"><img src="images/news.jpg" alt=""></a>
                 </div>
                 <div class="info-text">
                   <a href="#"><p>邦恩德第三次荣获PERE颁发“年度亚洲最佳机构</p></a>
@@ -89,7 +88,7 @@
               </div>
               <div class="info-content col-xs-12">
                 <div class="info-img">
-                  <a href="#"><img data-original="images/news.jpg" alt=""></a>
+                  <a href="#"><img src="images/news.jpg" alt=""></a>
                 </div>
                 <div class="info-text">
                   <a href="#"><p>邦恩德第三次荣获PERE颁发“年度亚洲最佳机构</p></a>
@@ -98,7 +97,7 @@
               </div>
               <div class="info-content col-xs-12">
                 <div class="info-img">
-                  <a href="#"><img data-original="images/news.jpg" alt=""></a>
+                  <a href="#"><img src="images/news.jpg" alt=""></a>
                 </div>
                 <div class="info-text">
                   <a href="#"><p>邦恩德第三次荣获PERE颁发“年度亚洲最佳机构</p></a>
@@ -112,7 +111,7 @@
                 <h2>媒体视频</h2>
               </div>
               <div class="media-video">
-                  <video id="infoVideo" preload="preload" poster='images/video.jpg' width="100%" height="326px">
+                  <video id="infoVideo" preload="preload" controls poster='images/video.jpg' width="100%" height="326px">
                     <source src="video/720.mp4" type="video/mp4">
                   </video>
                   <img class="media-video-ad img-responsive" src="images/pause.png" alt="">
@@ -173,7 +172,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="#"><img src="images/logo.jpg" alt="" style="width: 30%;padding: 13px 10px;"></a>
+                    <a href="#"><img src="images/fixed-logo.jpg" alt=""></a>
                 </div>
                 <div class="collapse navbar-collapse" id="mobile-navbar-collapse">
                     <ul class="nav navbar-nav">
@@ -189,57 +188,43 @@
     <!-- 移动端nav结束 -->
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/jquery.lazyload.js"></script>
     <script>
         $(function(){
           $("#banvideo").on("ended",function(){
             $("#banvideo").css("display","none");
-            $(".banimg").fadeIn(1000);
+            $(".banimg").show();
             setTimeout(function(){
             	if($(window).width()>768){
-            		$('.glory').slideDown(1000);
+            		$('.glory').slideDown(200);
             	}
             },1000);
           });
           $("#infoVideo").on("click",function(){
-          	$("#infoVideo").attr("controls","controls");
             if ($("#infoVideo")[0].paused) {
               $("#infoVideo")[0].play();
               $('.media-video-ad').hide();
             } else {
               $("#infoVideo")[0].pause();
               $('.media-video-ad').show();
-              $("#infoVideo").removeAttr("controls");
             }
           });
           $(".media-video-ad").on("click",function(){
             if ($("#infoVideo")[0].paused) {
               $("#infoVideo")[0].play();
               $('.media-video-ad').hide();
-              $("#infoVideo").attr("controls","controls");
             } else {
               $("#infoVideo")[0].pause();
               $('.media-video-ad').show();
-              $("#infoVideo").removeAttr("controls");
             }
           });
           $("#infoVideo").on("ended",function(){
             $(".media-video-ad").show();
-            $("#infoVideo").removeAttr("controls");
-          });
-          $("#infoVideo")[0].addEventListener("play",function(){
-          	$('.media-video-ad').hide();
-          });
-          $("#infoVideo")[0].addEventListener("pause",function(){
-          	$('.media-video-ad').show();
           });
 
-          $("img").lazyload(
-            { effect: "fadeIn", placeholder:"http://xxx/1.gif" }
-          );
 
-
-
+          // $("#infoVideo").on("dblclick",function(){
+          //    $("#infoVideo")[0].RequestFullScreen();
+          // })
         });
 
         
