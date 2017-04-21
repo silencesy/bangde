@@ -363,8 +363,8 @@ s, i, em {
 
 @media screen and (max-width:767px) {
     .header {
-        height: 80px;
-        line-height: 80px;
+        height: 51px;
+        line-height: 51px;
     }
     .container {
         width: 100%;
@@ -385,9 +385,7 @@ s, i, em {
         width: 70%;
     } 
     .top-logo {
-        float: none !important;
-        text-align: center;
-        display: inline-block;   
+        display: none;  
     }
     .glory {
         display: none;
@@ -397,9 +395,6 @@ s, i, em {
     }
     .header .top-nav-ul li a {
         padding: 0 10px;
-    }
-    .header {
-
     }
     .news-info .info-title h2 {
         text-align: center;
@@ -457,9 +452,6 @@ s, i, em {
     }
     .visible-xs {
         display: block !important;
-    }
-    .header-con {
-        margin-top: 55px;
     }
 
     /*暂停图标*/ 
